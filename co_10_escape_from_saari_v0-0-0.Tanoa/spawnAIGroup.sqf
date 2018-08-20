@@ -6,7 +6,7 @@ _unitsInGroup = ["O_Soldier_GL_F","O_Soldier_F","O_Soldier_lite_F","O_Soldier_AR
 _spawnMarker = _spawnpoints select (floor random (count _spawnpoints));
 
 _unksSpawnPosition = getMarkerPos _spawnMarker; //[x,y,z]
-hint format ["Position %1",_unksSpawnPosition select [0,2]];
+//hint format ["Position %1",_unksSpawnPosition select [0,2]];
 newGroup = createGroup [east,true];
 _newLeader = "O_Soldier_SL_F" createUnit [_unksSpawnPosition,newGroup,"newLeader = this"];
 sleep 1;
