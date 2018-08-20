@@ -8,6 +8,7 @@
 
 
 // Array of all enemy solders that can spawn
+/* Uncomment this when ready
 enemyArray = [
 "O_soldier_F";
 "";
@@ -19,3 +20,5 @@ enemyArray = [
 "";
 ""
 ];
+
+*/
