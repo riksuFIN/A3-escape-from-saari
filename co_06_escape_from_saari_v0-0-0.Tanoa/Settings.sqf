@@ -1,8 +1,12 @@
 //Settings.sqf
-//by riksuFIN
 // Define all mission-related adjustable settings here in centralized place, to be used by scripts
 
 
+
+// Set debug mode on or off (prints debug information to chat, log etc)
+debug = true;
+
+//publicVariable = debug;	//DON'T TOUCH       this failed, "debug" is reserved variable :/
 
 
 

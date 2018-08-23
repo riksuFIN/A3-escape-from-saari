@@ -2,7 +2,6 @@
 
 
 
-debug = true;
 
 
 // Run Settings.sqf

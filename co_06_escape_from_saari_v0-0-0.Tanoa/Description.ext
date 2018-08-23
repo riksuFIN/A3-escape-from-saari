@@ -1,0 +1,88 @@
+// Description.ext
+
+
+
+
+respawnOnStart = -1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// MP Parameters
+// https://community.bistudio.com/wiki/Arma_3_Mission_Parameters
+class Params
+{
+	/*		COMMENTED OUT, since it's an example
+	class ViewDistance
+	{
+		// Visible name in lobby settings list
+		title = "View distance";
+
+		// must be integers - commas e.g 1.5 are not allowed
+		values[] = { 500, 1000, 2000, 5000 };
+
+		// Description of each selectable item - must have the same number of items as 'values'
+		// If texts are missing, the values will be displayed instead
+		texts[] = { "500m", "1000m", "2 km", "5 km" };
+
+		// must be listed in 'values' array, otherwise 0 is used. If not integer, fallback value is 1
+		default = 1000;
+
+		// (optional) script file called when player joins, selected value is passed as an argument
+		file = "setViewDistance.sqf";
+	};
+	*/
+
+
+	// Predefined params
+	// Time of day
+	#define DAYTIMEPERIOD_DEFAULT 12			//Options are: 0, 6, 12 or 18
+	#include "\a3\functions_f\Params\paramDaytimePeriod.hpp"
+
+	 //Weather
+	#define WEATHER_DEFAULT	25					// Can be 0 (sunny), 25, 50, 75 or 100 (storm))
+	#include "\a3\functions_f\Params\paramWeather.hpp"
+
+	// Time Acceleration
+	#define TIMEACCELERATION_DEFAULT 10			// Can be x1, x2, x5, x10 or x20
+	#include "\a3\Functions_F_MP_Mark\Params\paramTimeAcceleration.hpp"
+
+	// View Distance
+	#define VIEW_DISTANCE_MIN 1000
+	#define VIEW_DISTANCE_MAX 4000
+	#define VIEW_DISTANCE_DEFAULT 1800
+	#include "\a3\Functions_F_Heli\Params\paramViewDistance.hpp"
+
+	
+	
+	// Revive
+    #include "\a3\Functions_F\Params\paramRevive.hpp"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+};
