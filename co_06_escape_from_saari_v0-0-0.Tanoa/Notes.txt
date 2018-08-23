@@ -1,0 +1,25 @@
+Names of things that may be needed universally
+Just a reminder
+
+---DEFINED IN EDITOR:
+NAMES
+
+p1, p2, p3, p4, p5, p6, p7, p8	//UNITS (script name) of each player's charter
+
+playerSquad	// SQUAD (script name) of player's squad
+Escapees	// SQUAD (in-game name) of player's squad
+
+
+respawn_west	// MODULE respawn module (marks respawn pos, moved by script)
+
+
+TRIGGERS:
+trig_OutsideGameArea	// Executes script\End\Success.sqf when entire player group is ouside area
+	"marker_5"	// Marker that visualizes above trigger to player
+
+
+---DEFINED IN SCRIPTS
+
+"debug"		// BOOL	Debug on/off
+
+
