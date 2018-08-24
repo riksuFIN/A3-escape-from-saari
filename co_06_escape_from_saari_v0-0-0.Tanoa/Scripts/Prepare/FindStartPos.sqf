@@ -2,7 +2,7 @@
 //by riksuFIN
 // Randomize start pos & objective location for spawning
 
-//private [""];
+private ["_start_marker_name_start","_objective_marker_start","_startPosMarkerArray","_objectivePosMarkerArray","_nextMarker","_number","_rand","_startType"];
 
 //if !{isServer} exitWith {};
 
@@ -61,3 +61,34 @@ diag_log format ["Markers are sorted, found %1 spawn pos markers %2 objective ma
 if (debug) then {
 	systemChat format ["Markers are sorted, found %1 spawn pos markers %2 objective markers",(count _startPosMarkerArray),(count _objectivePosMarkerArray)];
 };
+
+
+_startType = ["startType",0] call BIS_fnc_getParamValue;
+
+_rand = random 100;
+
+	// Pick between randomly generated location and pre-defined locations
+		// Note: StartType = parameter, 0: Both, 1: pre-placed, 2: Random
+if ((_rand > 50 && _startType != 1 ) || _startType == 2 ) then {
+// Generate random position
+	
+	diag_log "Selected random location";
+	if (debug) then {
+	systemChat "Selected random location";
+	};
+
+	// Exec script to find random pos & spawn generic thing there
+	null = execVM "Scripts\Prepare\SpawnRandomStartPos.sqf";
+
+} else {
+	// Find position from pre-defined locations
+	diag_log "Selected pre-placed location";
+	if (debug) then {
+	systemChat "Selected pre-placed location";
+	};
+	
+	
+	
+	
+};
+

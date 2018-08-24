@@ -12,14 +12,6 @@ respawnOnStart = -1;
 
 
 
-
-
-
-
-
-
-
-
 // MP Parameters
 // https://community.bistudio.com/wiki/Arma_3_Mission_Parameters
 class Params
@@ -62,17 +54,30 @@ class Params
 	// View Distance
 	#define VIEW_DISTANCE_MIN 1000
 	#define VIEW_DISTANCE_MAX 4000
-	#define VIEW_DISTANCE_DEFAULT 1800
+	#define VIEW_DISTANCE_DEFAULT 1600
 	#include "\a3\Functions_F_Heli\Params\paramViewDistance.hpp"
 
-	
-	
 	// Revive
     #include "\a3\Functions_F\Params\paramRevive.hpp"
 
 
 
+	// Select if start type is pre-placed, random location or both
+	class StartType
+	{
+		// Visible name in lobby settings list
+		title = "Start location generation type";
+		
+		// must be integers - commas e.g 1.5 are not allowed
+		values[] = { 0, 1, 2};
 
+		// Description of each selectable item - must have the same number of items as 'values'
+		// If texts are missing, the values will be displayed instead
+		texts[] = { "Both", "Only Pre-Placed start locations", "Only randomly generated start locations" };
+
+		// must be listed in 'values' array, otherwise 0 is used. If not integer, fallback value is 1
+		default = 0;
+	};
 
 
 

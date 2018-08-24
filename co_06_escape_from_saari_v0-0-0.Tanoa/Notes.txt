@@ -1,5 +1,16 @@
+if (debug) then {
+	systemChat format ["",];
+};
+
+
+
+
+
+
 Names of things that may be needed universally
 Just a reminder
+
+
 
 ---DEFINED IN EDITOR:
 NAMES
@@ -23,3 +34,7 @@ trig_OutsideGameArea	// Executes script\End\Success.sqf when entire player group
 "debug"		// BOOL	Debug on/off
 
 
+
+
+PARAMETERS:
+StartType	// Set if should be pre-placed (1), random (2) or both (0)
